@@ -1,3 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: @main-bg-color;
+  font-size: 62.5%;
+  max-width: @page-width;
+  width: 100%;
+  margin: 0 auto;
+  font-family: Helvetica;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+p {
+  margin: @std-padding;
+}
+
+nav {
+  .flexbox(row, flex-start, flex-start);
+  width: 100%;
+  padding: @std-padding;
+  background-color: @color-twitter-dark;
+
+  a {
+    padding-left: @std-padding;
+    padding-right: @std-padding;
+    font-size: 1rem;
+    line-height: 2rem;
+    .link();
+  }
+  .selected-link {
+      border-style: solid;
+      border-width: 1px;
+      border-radius: 1rem;
+  }
+}
+
+header {
+  .flexbox(row, space-between, flex-start);
+  background-color: @color-twitter-dark;
+  color: @color-twitter-light;
+  padding-left: @std-padding;
+  padding-right: @std-padding;
+  padding-bottom: @std-padding;
+
+  svg {
+    fill: @color-twitter-light;
+    width: 200px;
+    height: 200px;
+  }
+}
+
+main {
+  background-color: white;
+  font-size: 1.5rem;
+  padding: @std-padding;
+}
+
+footer {
+  .flexbox(row, center, flex-start);
+  background-color: @color-twitter-dark;
+  color: @color-twitter-light;
+  font-size: 1rem;
+  padding-top: @std-padding;
+  padding-bottom: @std-padding;
 }
