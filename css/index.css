@@ -143,6 +143,8 @@ h1 {
 }
 p {
   margin: 20px;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 nav {
   display: flex;
@@ -184,7 +186,6 @@ header svg {
 }
 main {
   background-color: white;
-  font-size: 1.5rem;
   padding: 20px;
 }
 footer {
@@ -197,4 +198,68 @@ footer {
   font-size: 1rem;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+.button-container button {
+  margin: 20px;
+  font-size: 3rem;
+  line-height: 6rem;
+  color: #005fd1;
+  background-color: #C1C8E4;
+  border: 1px solid #8860D0;
+  border-radius: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  cursor: pointer;
+}
+.button-container button:hover {
+  background-color: #5AB9EA;
+}
+.about-us-section-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 550px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding-bottom: 20px;
+}
+.about-us-section-container .about-us-section-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  border: 2px solid #005fd1;
+  height: 100%;
+  width: 30%;
+  padding: 20px;
+}
+.about-us-section-container .about-us-section-row .about-us-name {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.about-us-section-container .about-us-section-row .about-us-img {
+  border: 2px solid #005fd1;
+  background-color: #C1C8E4;
+  height: 200px;
+  text-align: center;
+}
+.about-us-section-container .about-us-section-row .about-us-text {
+  flex-grow: 1;
+  padding-top: 20px;
+}
+.about-us-section-container .about-us-section-row .about-us-text .dev-word {
+  color: #8860D0;
+}
+.about-us-section-container .about-us-section-row .about-us-button {
+  text-align: center;
+}
+.gradient-background {
+  background-image: radial-gradient(#71c9f8, #005fd1);
 }

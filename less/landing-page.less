@@ -18,6 +18,8 @@ h1 {
 
 p {
   margin: @std-padding;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 nav {
@@ -57,7 +59,6 @@ header {
 
 main {
   background-color: white;
-  font-size: 1.5rem;
   padding: @std-padding;
 }
 
@@ -68,4 +69,70 @@ footer {
   font-size: 1rem;
   padding-top: @std-padding;
   padding-bottom: @std-padding;
+}
+
+.button-container {
+  .flexbox(row, center, flex-start);
+
+  button {
+    margin: @std-padding;
+    font-size: 3rem;
+    line-height: 6rem;
+    color: @color-twitter-dark;
+    background-color: @color-alt-light;
+    border: 1px solid @color-alt-dark;
+    border-radius: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: @color-alt-medium;
+    }
+  }  
+}
+
+.about-us-section-container {
+  .flexbox(row, space-around, flex-start);
+  height: 550px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding-bottom: @std-padding;
+
+  .about-us-section-row {
+    .flexbox(column, flex-start, stretch);
+    border: 2px solid @color-twitter-dark;
+    height: 100%;
+    width: 30%;
+    padding: @std-padding;
+
+    .about-us-name {
+      text-align: center;
+      padding-bottom: @std-padding;
+    }
+
+    .about-us-img {
+      border: 2px solid @color-twitter-dark;
+      background-color: @color-alt-light;
+      height: 200px;
+      text-align: center;
+    }
+
+    .about-us-text {
+      flex-grow: 1;
+      padding-top: @std-padding;
+
+      .dev-word {
+        color: #8860D0;
+      }
+    }
+
+    .about-us-button {
+      text-align: center;
+    }
+  }
+}
+
+.gradient-background {
+  background-image: radial-gradient(@color-twitter-light, @color-twitter-dark);
 }
