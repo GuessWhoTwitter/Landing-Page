@@ -27,11 +27,12 @@ ol {
   font-size: 1.5rem;
   line-height: 2rem;
   list-style-type: decimal;
-  list-style-position: inside; 
+  list-style-position: outside;
+  padding-left: @std-padding;
 }
 
 ol > li > ol {
-  list-style-type: lower-alpha;
+  list-style-type: disc;
 }
 
 nav {
@@ -166,17 +167,24 @@ footer {
   flex-grow: 1;
 }
 
-.twitter-user-img {
+.flex-img {
+  .flexbox(row, space-around, flex-start);
+
+  .twitter-user-img {
     width: 25vw;
     height: 25vw;
     max-width: 180px;
     max-height: 180px;
     border-radius: 50%;
     border: 2px solid @color-alt-dark;
-}
+  }
 
-.flex-img {
-  .flexbox(row, space-around, flex-start);
+  .twitter-handle {
+    font-size: 1rem;
+    margin-top: @std-padding;
+    width: 25vw;
+    text-align: center;
+  }
 }
 
 .game-example {

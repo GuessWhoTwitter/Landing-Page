@@ -151,10 +151,11 @@ ol {
   font-size: 1.5rem;
   line-height: 2rem;
   list-style-type: decimal;
-  list-style-position: inside;
+  list-style-position: outside;
+  padding-left: 20px;
 }
 ol > li > ol {
-  list-style-type: lower-alpha;
+  list-style-type: disc;
 }
 nav {
   display: flex;
@@ -286,7 +287,13 @@ footer {
 .flexgrow-full {
   flex-grow: 1;
 }
-.twitter-user-img {
+.flex-img {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.flex-img .twitter-user-img {
   width: 25vw;
   height: 25vw;
   max-width: 180px;
@@ -294,11 +301,11 @@ footer {
   border-radius: 50%;
   border: 2px solid #8860D0;
 }
-.flex-img {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-start;
+.flex-img .twitter-handle {
+  font-size: 1rem;
+  margin-top: 20px;
+  width: 25vw;
+  text-align: center;
 }
 .game-example {
   border: 1px solid #005fd1;
