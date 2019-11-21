@@ -146,6 +146,16 @@ p {
   font-size: 1.5rem;
   line-height: 2rem;
 }
+ol {
+  margin: 20px;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+ol > li > ol {
+  list-style-type: lower-alpha;
+}
 nav {
   display: flex;
   flex-direction: row;
@@ -184,6 +194,10 @@ header svg {
   width: 200px;
   height: 200px;
 }
+header .question-mark {
+  font-size: 6rem;
+  font-weight: bold;
+}
 main {
   background-color: white;
   padding: 20px;
@@ -204,6 +218,7 @@ footer {
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
+  margin-top: 20px;
 }
 .button-container button {
   margin: 20px;
@@ -246,7 +261,6 @@ footer {
 }
 .about-us-section-container .about-us-section-row .about-us-img {
   border: 2px solid #005fd1;
-  background-color: #C1C8E4;
   height: 200px;
   text-align: center;
 }
@@ -260,6 +274,36 @@ footer {
 .about-us-section-container .about-us-section-row .about-us-button {
   text-align: center;
 }
-.gradient-background {
+.radial-gradient-background {
   background-image: radial-gradient(#71c9f8, #005fd1);
+}
+.linear-gradient-background {
+  background-image: linear-gradient(#71c9f8, #005fd1);
+}
+.highlight-text {
+  color: #8860D0;
+}
+.flexgrow-full {
+  flex-grow: 1;
+}
+.twitter-user-img {
+  width: 25vw;
+  height: 25vw;
+  max-width: 180px;
+  max-height: 180px;
+  border-radius: 50%;
+  border: 2px solid #8860D0;
+}
+.flex-img {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.game-example {
+  border: 1px solid #005fd1;
+  padding-bottom: 20px;
+}
+.game-example .game-example-tweet {
+  text-align: center;
 }

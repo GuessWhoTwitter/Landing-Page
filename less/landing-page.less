@@ -22,6 +22,18 @@ p {
   line-height: 2rem;
 }
 
+ol {
+  margin: @std-padding;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  list-style-type: decimal;
+  list-style-position: inside; 
+}
+
+ol > li > ol {
+  list-style-type: lower-alpha;
+}
+
 nav {
   .flexbox(row, flex-start, flex-start);
   width: 100%;
@@ -55,6 +67,11 @@ header {
     width: 200px;
     height: 200px;
   }
+
+  .question-mark {
+    font-size: 6rem;
+    font-weight: bold;
+  }
 }
 
 main {
@@ -73,6 +90,7 @@ footer {
 
 .button-container {
   .flexbox(row, center, flex-start);
+  margin-top: @std-padding;
 
   button {
     margin: @std-padding;
@@ -113,7 +131,6 @@ footer {
 
     .about-us-img {
       border: 2px solid @color-twitter-dark;
-      background-color: @color-alt-light;
       height: 200px;
       text-align: center;
     }
@@ -133,6 +150,40 @@ footer {
   }
 }
 
-.gradient-background {
+.radial-gradient-background {
   background-image: radial-gradient(@color-twitter-light, @color-twitter-dark);
+}
+
+.linear-gradient-background {
+  background-image: linear-gradient(@color-twitter-light, @color-twitter-dark);
+}
+
+.highlight-text {
+  color: @color-alt-dark;
+}
+
+.flexgrow-full {
+  flex-grow: 1;
+}
+
+.twitter-user-img {
+    width: 25vw;
+    height: 25vw;
+    max-width: 180px;
+    max-height: 180px;
+    border-radius: 50%;
+    border: 2px solid @color-alt-dark;
+}
+
+.flex-img {
+  .flexbox(row, space-around, flex-start);
+}
+
+.game-example {
+  border: 1px solid @color-twitter-dark;
+  padding-bottom: @std-padding;
+
+  .game-example-tweet {
+    text-align: center;
+  }
 }
