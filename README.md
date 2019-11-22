@@ -1,2 +1,2 @@
 # Landing-Page
-LESS Command => less-watch-compiler less css index.less
+This repo contains the multipage marketing website for the Guess Who Twitter game.
