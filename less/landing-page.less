@@ -18,6 +18,21 @@ h1 {
 
 p {
   margin: @std-padding;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+ol {
+  margin: @std-padding;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  list-style-type: decimal;
+  list-style-position: outside;
+  padding-left: @std-padding;
+}
+
+ol > li > ol {
+  list-style-type: disc;
 }
 
 nav {
@@ -52,12 +67,24 @@ header {
     fill: @color-twitter-light;
     width: 200px;
     height: 200px;
+
+    @media @phone {
+      display: none;
+    }
+  }
+
+  .question-mark {
+    font-size: 6rem;
+    font-weight: bold;
+
+    @media @phone {
+      display: none;
+    }
   }
 }
 
 main {
   background-color: white;
-  font-size: 1.5rem;
   padding: @std-padding;
 }
 
@@ -68,4 +95,133 @@ footer {
   font-size: 1rem;
   padding-top: @std-padding;
   padding-bottom: @std-padding;
+}
+
+.button-container {
+  .flexbox(row, center, flex-start);
+  margin-top: @std-padding;
+
+  button {
+    margin: @std-padding;
+    font-size: 3rem;
+    line-height: 6rem;
+    color: @color-twitter-dark;
+    background-color: @color-alt-light;
+    border: 1px solid @color-alt-dark;
+    border-radius: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: @color-alt-medium;
+    }
+  }  
+}
+
+.about-us-section-container {
+  .flexbox(row, space-around, flex-start);
+  height: 100%;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding-bottom: @std-padding;
+  flex-wrap: wrap;
+
+  .about-us-section-person-info {
+    .flexbox(column, flex-start, stretch);
+    border: 2px solid @color-twitter-dark;
+    height: 500px;
+    width: 275px;
+    padding: @std-padding;
+    margin-bottom: @std-padding;
+    margin-left: @std-padding;
+    margin-right: @std-padding;
+
+    .about-us-name {
+      text-align: center;
+      padding-bottom: @std-padding;
+    }
+
+    .about-us-img {
+      border: 2px solid @color-twitter-dark;
+      height: 200px;
+      text-align: center;
+    }
+
+    .about-us-text {
+      flex-grow: 1;
+      padding-top: @std-padding;
+
+      .dev-word {
+        color: #8860D0;
+      }
+    }
+
+    .about-us-button {
+      text-align: center;
+
+      .tweet-btn {
+        font-size: 1rem;
+        border-radius: 5px;
+        background-color: @color-alt-light;
+
+        &:hover {
+          background-color: @color-alt-medium;
+        }
+      }
+    }
+  }
+}
+
+.radial-gradient-background {
+  background-image: radial-gradient(@color-twitter-light, @color-twitter-dark);
+}
+
+.linear-gradient-background {
+  background-image: linear-gradient(@color-twitter-light, @color-twitter-dark);
+}
+
+.highlight-text {
+  color: @color-alt-dark;
+}
+
+.flexgrow-full {
+  flex-grow: 1;
+}
+
+.flex-img {
+  .flexbox(row, space-around, flex-start);
+
+  .twitter-user-img {
+    width: 25vw;
+    height: 25vw;
+    max-width: 180px;
+    max-height: 180px;
+    border-radius: 50%;
+    border: 2px solid @color-alt-dark;
+  }
+
+  .twitter-handle {
+    font-size: 1rem;
+    margin-top: @std-padding;
+    width: 25vw;
+    text-align: center;
+  }
+}
+
+.game-example {
+  border: 1px solid @color-twitter-dark;
+  padding-bottom: @std-padding;
+
+  .game-example-tweet {
+    text-align: center;
+  }
+
+  @media @tablet {
+    display: none;
+  }
+
+  @media @phone {
+    display: none;
+  }
 }

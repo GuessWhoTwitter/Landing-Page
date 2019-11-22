@@ -143,6 +143,19 @@ h1 {
 }
 p {
   margin: 20px;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+ol {
+  margin: 20px;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  list-style-type: decimal;
+  list-style-position: outside;
+  padding-left: 20px;
+}
+ol > li > ol {
+  list-style-type: disc;
 }
 nav {
   display: flex;
@@ -182,9 +195,22 @@ header svg {
   width: 200px;
   height: 200px;
 }
+@media (max-width: 500px) {
+  header svg {
+    display: none;
+  }
+}
+header .question-mark {
+  font-size: 6rem;
+  font-weight: bold;
+}
+@media (max-width: 500px) {
+  header .question-mark {
+    display: none;
+  }
+}
 main {
   background-color: white;
-  font-size: 1.5rem;
   padding: 20px;
 }
 footer {
@@ -197,4 +223,126 @@ footer {
   font-size: 1rem;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+.button-container button {
+  margin: 20px;
+  font-size: 3rem;
+  line-height: 6rem;
+  color: #005fd1;
+  background-color: #C1C8E4;
+  border: 1px solid #8860D0;
+  border-radius: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  cursor: pointer;
+}
+.button-container button:hover {
+  background-color: #5AB9EA;
+}
+.about-us-section-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 100%;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding-bottom: 20px;
+  flex-wrap: wrap;
+}
+.about-us-section-container .about-us-section-person-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  border: 2px solid #005fd1;
+  height: 500px;
+  width: 275px;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.about-us-section-container .about-us-section-person-info .about-us-name {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.about-us-section-container .about-us-section-person-info .about-us-img {
+  border: 2px solid #005fd1;
+  height: 200px;
+  text-align: center;
+}
+.about-us-section-container .about-us-section-person-info .about-us-text {
+  flex-grow: 1;
+  padding-top: 20px;
+}
+.about-us-section-container .about-us-section-person-info .about-us-text .dev-word {
+  color: #8860D0;
+}
+.about-us-section-container .about-us-section-person-info .about-us-button {
+  text-align: center;
+}
+.about-us-section-container .about-us-section-person-info .about-us-button .tweet-btn {
+  font-size: 1rem;
+  border-radius: 5px;
+  background-color: #C1C8E4;
+}
+.about-us-section-container .about-us-section-person-info .about-us-button .tweet-btn:hover {
+  background-color: #5AB9EA;
+}
+.radial-gradient-background {
+  background-image: radial-gradient(#71c9f8, #005fd1);
+}
+.linear-gradient-background {
+  background-image: linear-gradient(#71c9f8, #005fd1);
+}
+.highlight-text {
+  color: #8860D0;
+}
+.flexgrow-full {
+  flex-grow: 1;
+}
+.flex-img {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.flex-img .twitter-user-img {
+  width: 25vw;
+  height: 25vw;
+  max-width: 180px;
+  max-height: 180px;
+  border-radius: 50%;
+  border: 2px solid #8860D0;
+}
+.flex-img .twitter-handle {
+  font-size: 1rem;
+  margin-top: 20px;
+  width: 25vw;
+  text-align: center;
+}
+.game-example {
+  border: 1px solid #005fd1;
+  padding-bottom: 20px;
+}
+.game-example .game-example-tweet {
+  text-align: center;
+}
+@media (max-width: 799px) {
+  .game-example {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .game-example {
+    display: none;
+  }
 }
